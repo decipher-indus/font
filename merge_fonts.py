@@ -1,21 +1,23 @@
 import fontforge
 import os
 
-def merge_fonts(merge_font_path, base_font_path, output_path):
+def merge_fonts(base_font_path, merge_font_path, output_path):
     base_font = fontforge.open(base_font_path)
     merge_font = fontforge.open(merge_font_path)
 
     base_font_glyphs = set(base_font)
     merge_font_glyphs = set(merge_font)
 
-    # overlap = base_font_glyphs.intersection(merge_font_glyphs)
-    # if overlap:
-    #     print(f"Error: The following glyphs are present in both fonts: {overlap}")
-    #     return
+    overlap = base_font_glyphs.intersection(merge_font_glyphs)
+    if '.notdef' in overlap: 
+        overlap.remove(".notdef")
+    for u in overlap: 
+        base_font.removeGlyph(u) 
+
     new_family_name = "Indus Programmer"
     base_font.familyname = new_family_name
-    base_font.fullname = f"{new_family_name} {base_font.fullname.partition('-')[2]}"
-    base_font.fontname = f"{new_family_name.replace(' ', '')}-{base_font.fontname.partition('-')[2]}"
+    base_font.fullname = f"{new_family_name} {merge_font.fullname.partition('-')[2]}"
+    base_font.fontname = f"{new_family_name.replace(' ', '')}-{merge_font.fontname.partition('-')[2]}"
 
     base_font.mergeFonts(merge_font_path)
 
