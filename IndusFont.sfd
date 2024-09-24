@@ -22,7 +22,7 @@ OS2Version: 4
 OS2_WeightWidthSlopeOnly: 0
 OS2_UseTypoMetrics: 1
 CreationTime: 1683943658
-ModificationTime: 1727133428
+ModificationTime: 1727153844
 PfmFamily: 17
 TTFWeight: 400
 TTFWidth: 5
@@ -742,8 +742,8 @@ DisplaySize: -128
 AntiAlias: 1
 FitToEm: 0
 WidthSeparation: 150
-WinInfo: 935 11 5
-BeginChars: 987 731
+WinInfo: 891 11 5
+BeginChars: 989 731
 
 StartChar: .notdef
 Encoding: 256 -1 0
@@ -66217,10 +66217,9 @@ EndSplineSet
 Validated: 37
 EndChar
 
-StartChar: uniE3E7
-Encoding: 986 58343 730
+StartChar: glyph732
+Encoding: 988 58345 730
 Width: 278
-GlyphClass: 1
 Flags: W
 LayerCount: 2
 Fore
@@ -66245,7 +66244,7 @@ SplineSet
  39.9599609375 711 39.9599609375 711 29.9599609375 726.5 c 128,-1,27
  19.9599609375 742 19.9599609375 742 31.9599609375 753 c 0,0,1
 EndSplineSet
-Validated: 33
+Validated: 524321
 EndChar
 EndChars
 EndSplineFont
