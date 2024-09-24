@@ -40,7 +40,7 @@ With most desktop-oriented distributions, double-clicking each font file in the 
 
     for type in Bold Light Medium Regular Retina; do
         file_path="${HOME}/.local/share/fonts/IndusProgrammer-${type}.ttf"
-        file_url="https://github.com/decipher-indus/font/blob/programmer/distr/IndusProgrammer/IndusProgrammer-${type}.ttf?raw=true"
+        file_url="https://github.com/decipher-indus/font/blob/programmer/IndusProgrammer/IndusProgrammer-${type}.ttf?raw=true"
         if [ ! -e "${file_path}" ]; then
             echo "wget -O $file_path $file_url"
             wget -O "${file_path}" "${file_url}"
