@@ -16,8 +16,9 @@ def merge_fonts(base_font_path, merge_font_path, output_path):
 
     new_family_name = "Indus Programmer"
     base_font.familyname = new_family_name
-    base_font.fullname = f"{new_family_name} {merge_font.fullname.partition('-')[2]}"
-    base_font.fontname = f"{new_family_name.replace(' ', '')}-{merge_font.fontname.partition('-')[2]}"
+    base_font.fullname = f"{new_family_name} {base_font.fullname[len(base_font.familyname):]}"
+    base_font.fontname = f"{new_family_name.replace(' ', '')}-{base_font.fontname.partition('-')[2]}"
+    print(f"Fullname: {base_font.fullname}      Fontname: {base_font.fontname}")
 
     base_font.mergeFonts(merge_font_path)
 
