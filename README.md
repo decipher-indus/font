@@ -58,7 +58,7 @@ Enabling ligatures
 Atom
 ----
 
-To change your font to Fira Code, open Atom's preferences (`cmd + ,` on a Mac, `ctrl + ,` on PC), make sure the "Settings" tab is selected, or the "Editor" in Atom 1.10+, and scroll down to "Editor Settings". In the "Font Family" field, enter `Indus Programmer`.
+To change your font to Indus Programmer, open Atom's preferences (`cmd + ,` on a Mac, `ctrl + ,` on PC), make sure the "Settings" tab is selected, or the "Editor" in Atom 1.10+, and scroll down to "Editor Settings". In the "Font Family" field, enter `Indus Programmer`.
 
 If you wish to specify a font weight, for example, Light, use `Indus Programmer Light` as a font name (Windows) or `IndusProgrammer-Light` (macOS).
 

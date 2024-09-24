@@ -1,7 +1,7 @@
 import fontforge
 import os
 
-def merge_fonts(base_font_path, merge_font_path, output_path):
+def merge_fonts(merge_font_path, base_font_path, output_path):
     base_font = fontforge.open(base_font_path)
     merge_font = fontforge.open(merge_font_path)
 
