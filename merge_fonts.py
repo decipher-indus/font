@@ -12,6 +12,10 @@ def merge_fonts(base_font_path, merge_font_path, output_path):
     # if overlap:
     #     print(f"Error: The following glyphs are present in both fonts: {overlap}")
     #     return
+    new_family_name = "Indus Programmer"
+    base_font.familyname = new_family_name
+    base_font.fullname = f"{new_family_name} {base_font.fullname.partition('-')[2]}"
+    base_font.fontname = f"{new_family_name.replace(' ', '')}-{base_font.fontname.partition('-')[2]}"
 
     base_font.mergeFonts(merge_font_path)
 
@@ -34,6 +38,6 @@ def merge_fonts_in_directory(base_dir, merge_font_path, output_dir):
 
 base_dir = "source-code-pro"  
 merge_font_path = "IndusFont.ttf"  
-output_dir = "IndusProgrammer"  
+output_dir = "IndusProgrammer"
 
 merge_fonts_in_directory(base_dir, merge_font_path, output_dir)
